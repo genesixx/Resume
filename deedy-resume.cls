@@ -8,7 +8,7 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
-\usepackage[hmargin=1.25cm, vmargin=0.75cm, a4paper]{geometry} % Specifies horizontal and vertical page margins
+\usepackage[hmargin=1.20cm, vmargin=0.70cm, a4paper]{geometry} % Specifies horizontal and vertical page margins
 \usepackage{hyperref} % Required for links
 
 %----------------------------------------------------------------------------------------
@@ -22,6 +22,7 @@
 \definecolor{subheadings}{HTML}{364652}
 \definecolor{secondary}{HTML}{466E88} % The color of subsections and places worked/studied
 \definecolor{lightsecondary}{HTML}{33375B}
+\definecolor{red}{HTML}{FF0000}
 \definecolor{date}{HTML}{666666} % The color used for the Last Updated text at the top right
 
 %----------------------------------------------------------------------------------------
@@ -29,8 +30,9 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage{fontspec} % Required for specifying custom fonts in XeLaTeX
-
-\setmainfont[Color=primary, Path = fonts/lato/,BoldItalicFont=Lato-RegIta,BoldFont=Lato-Reg,ItalicFont=Lato-LigIta]{Lato-Lig} % The primary font for content text; defines bold, italic and bold-italic as well
+\defaultfontfeatures{LetterSpace=1}
+\linespread{1.05}
+\setmainfont[Color=primary, Path = fonts/lato/,BoldItalicFont=Lato-RegIta,BoldFont=Lato-Reg,ItalicFont=Lato-LigIta,SizeFeatures={Size=10.5}]{Lato-Lig} % The primary font for content text; defines bold, italic and bold-italic as well
 
 \setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight} % The font used where \sfffamily is called
 
@@ -76,7 +78,7 @@ Last Updated on \today % Last Updated text
 
 \titlespacing{\section}{0pt}{0pt}{0pt} % Removes the spacing around the main section titles
 \titlespacing{\subsection}{0pt}{0pt}{0pt} % Removes the spacing around the subsections
-\newcommand{\sectionspace}{\vspace{8pt}} % Defines a command to add a set amount of space after sections and subsections
+\newcommand{\sectionspace}{\vspace{5pt}} % Defines a command to add a set amount of space after sections and subsections
 \newcommand{\insectionspace}{\vspace{2pt}}
 \titleformat{\section}{ % Customize the large section titles
 \color{secondary}\scshape\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{}{0em}{}
@@ -90,7 +92,7 @@ Last Updated on \today % Last Updated text
 
 
 \newcommand{\descript}[1]{ % Used for describing the subsection either on the same line or underneath
-\color{lightsecondary}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont {#1 \\} \normalfont}
+\color{lightsecondary}\raggedright\scshape\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{11pt}{12pt}\selectfont {#1 \\} \normalfont}
 
 \newcommand{\location}[1]{ % Used for specifying a duration and/or location under a subsection
 \color{headings}\raggedright\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont {#1\\} \normalfont}

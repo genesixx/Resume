@@ -18,38 +18,24 @@
 \usepackage[usenames,dvipsnames]{xcolor} % Required for custom colors
 
 \definecolor{primary}{HTML}{0F0A0A} % The primary document color for content text
-\definecolor{headings}{HTML}{5A6771} % The color of the large sections
-\definecolor{subheadings}{HTML}{364652}
-\definecolor{secondary}{HTML}{466E88} % The color of subsections and places worked/studied
-\definecolor{lightsecondary}{HTML}{33375B}
+\definecolor{headings}{HTML}{1770a2} % The color of the large sections
+\definecolor{subheadings}{HTML}{1770a2}
+\definecolor{secondary}{HTML}{1770a2} % The color of subsections and places worked/studied
+\definecolor{lightsecondary}{HTML}{4086BA}
 \definecolor{red}{HTML}{FF0000}
 \definecolor{date}{HTML}{666666} % The color used for the Last Updated text at the top right
 
 %----------------------------------------------------------------------------------------
-%	FONTS
+%	FONTShttps://www.overleaf.com/project/5bb8708abf6def6dfae7d362
 %----------------------------------------------------------------------------------------
 
 \usepackage{fontspec} % Required for specifying custom fonts in XeLaTeX
-\defaultfontfeatures{LetterSpace=1}
+\defaultfontfeatures{LetterSpace=0.7}
 \linespread{1.05}
-\setmainfont[Color=primary, Path = fonts/lato/,BoldItalicFont=Lato-RegIta,BoldFont=Lato-Reg,ItalicFont=Lato-LigIta,SizeFeatures={Size=10.5}]{Lato-Lig} % The primary font for content text; defines bold, italic and bold-italic as well
+\setmainfont[Color=primary, Path = fonts/OpenSans/,BoldItalicFont=OpenSans-Italic,BoldFont=OpenSans-Regular,ItalicFont=OpenSans-LightItalic,SizeFeatures={Size=11}]{OpenSans-Light} % The primary font for content text; defines bold, italic and bold-italic as well
 
 \setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight} % The font used where \sfffamily is called
 
-%----------------------------------------------------------------------------------------
-%	LAST UPDATED COMMAND
-%----------------------------------------------------------------------------------------
-
-\usepackage[absolute]{textpos} % Required for positioning the Last Updated text at the top right of the page
-\usepackage[UKenglish]{isodate} % Prints the Last Updated date in UK English format
-
-\setlength{\TPHorizModule}{0.01\paperwidth} % Sets the units for the horizontal position used in the \begin{textblock} argument
-\setlength{\TPVertModule}{0.01\paperwidth} % Sets the units for the vertical position used in the \begin{textblock} argument
-\newcommand{\lastupdated}{ % Create a new command for printing the Last Updated text
-\begin{textblock}{25}(75,2) % The position of the Last Updated text on the page (75% of the page across, 2% down)
-\color{date}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont % Text styling of the text
-Last Updated on \today % Last Updated text
-\end{textblock}}
 
 
 \newcommand{\hightlight}[1]{\color{secondary}\textbf{#1}}
@@ -61,11 +47,11 @@ Last Updated on \today % Last Updated text
 \centering{ % Center the name
 \fontsize{40pt}{60pt} % Font size
 \color{secondary}
-\fontspec[Path = fonts/lato/]{Lato-Lig}\selectfont #1 % Last name font
+\fontspec[Path = fonts/OpenSans/]{OpenSans-Light}\selectfont #1 % Last name font
 } \\[5pt] % Whitespace between the name and contact information
 \centering{ % Center the contact information
 \color{headings} % Use the headings color
-\fontspec[Path = fonts/roboto/]{Roboto-Regular}\fontsize{11pt}{14pt}\selectfont #2} % Contact information font
+\fontspec[Path = fonts/OpenSans/]{OpenSans-Regular}\fontsize{11pt}{14pt}\selectfont #2} % Contact information font
 \noindent\makebox[\linewidth]{\color{secondary}\rule{\paperwidth}{0.4pt}} % Horizontal rule
 \vspace{-5pt} % Reduce whitespace after the rule slightly
 }
@@ -78,16 +64,16 @@ Last Updated on \today % Last Updated text
 
 \titlespacing{\section}{0pt}{0pt}{0pt} % Removes the spacing around the main section titles
 \titlespacing{\subsection}{0pt}{0pt}{0pt} % Removes the spacing around the subsections
-\newcommand{\sectionspace}{\vspace{5pt}} % Defines a command to add a set amount of space after sections and subsections
+\newcommand{\sectionspace}{\vspace{4.5pt}} % Defines a command to add a set amount of space after sections and subsections
 \newcommand{\insectionspace}{\vspace{2pt}}
 \titleformat{\section}{ % Customize the large section titles
-\color{secondary}\scshape\fontspec[Path = fonts/lato/]{Lato-Lig}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{}{0em}{}
+\color{secondary}\scshape\fontspec[Path = fonts/OpenSans/]{OpenSans-Light}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{}{0em}{}
 
 \titleformat{\subsection}{ % Customize the subsections and places worked/studied titles
-\color{secondary}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
+\color{secondary}\fontspec[Path = fonts/OpenSans/]{OpenSans-Bold}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase}{}{0em}{}
 
 \newcommand{\runsubsection}[1]{ % Used for creating subsections where a description is required on the same line
-\color{secondary}\fontspec[Path = fonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
+\color{secondary}\fontspec[Path = fonts/OpenSans/]{OpenSans-Bold}\fontsize{12pt}{12pt}\selectfont\bfseries\uppercase {#1} \normalfont}
 
 
 
